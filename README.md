@@ -1,8 +1,8 @@
-# Uçan Baz 🪂
+# kadim_cu 🪂
 
-Düşen Baz kafalarını sepetle yakala! 💣 bombalardan kaç, kafaları kaçırma — 3 canın var.
+Düşen kadim_cu kafalarını sepetle yakala! 💣 bombalardan kaç, kafaları kaçırma — 3 canın var.
 
-**Oyna:** https://beso1719.github.io/ucan-baz/
+**Oyna:** https://beso1719.github.io/kadim_cu/
 
 ## Özellikler
 - 📱 Parmakla kaydır · 💻 fare ya da ← → tuşları

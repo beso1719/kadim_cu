@@ -1,4 +1,4 @@
-// ===== Uçan Baz — düşen kafaları yakala =====
+// ===== kadim_cu — düşen kafaları yakala =====
 const cv = document.getElementById("cv");
 const ctx = cv.getContext("2d");
 const scoreEl = document.getElementById("score");
@@ -9,8 +9,8 @@ const ovTitle = document.getElementById("ov-title");
 const ovText  = document.getElementById("ov-text");
 const startBtn = document.getElementById("startBtn");
 
-const IMG_SRCS = ["img/baz1.jpeg","img/baz2.jpeg","img/baz3.jpeg","img/baz4.jpeg","img/baz5.jpeg"];
-const POS = [0.50, 0.55, 0.52, 0.58, 0.55]; // her foto için dikey yüz odağı
+const IMG_SRCS = ["img/kadim.jpeg","img/kadim.jpeg","img/kadim.jpeg","img/kadim.jpeg","img/kadim.jpeg"];
+const POS = [0.50, 0.50, 0.50, 0.50, 0.50]; // her foto için dikey yüz odağı
 const images = IMG_SRCS.map(s => { const i = new Image(); i.src = s; return i; });
 
 let W = 0, H = 0, DPR = 1;
@@ -50,7 +50,7 @@ let score = 0, lives = 3, running = false;
 let combo = 0, bestCombo = 0;
 let slowT = 0;          // yavaş çekim kalan süre (frame)
 let shakeT = 0;         // ekran sarsıntısı
-let best = +(localStorage.getItem("ucanbaz_best") || 0);
+let best = +(localStorage.getItem("kadimcu_best") || 0);
 let spawnTimer = 0, lastT = 0;
 const MAX_LIVES = 5;
 bestEl.textContent = best;
@@ -283,8 +283,8 @@ function roundRect(x,y,w,h,r){
 function end(){
   running = false;
   endSound();
-  if (score > best){ best = score; localStorage.setItem("ucanbaz_best", best); bestEl.textContent = best; ovTitle.textContent = "🏆 YENİ REKOR!"; }
-  else ovTitle.textContent = "Oyun Bitti!";
+  if (score > best){ best = score; localStorage.setItem("kadimcu_best", best); bestEl.textContent = best; ovTitle.textContent = "🏆 YENİ REKOR!"; }
+  else ovTitle.textContent = "yarım_beyinl_pusucu";
   ovText.innerHTML = `Puanın: <b>${score}</b> · En iyi kombo: <b>${bestCombo}</b><br>Rekor: <b>${best}</b>`;
   startBtn.textContent = "TEKRAR OYNA";
   overlay.classList.add("show");
