@@ -133,6 +133,17 @@ function loop(t){
   if (shakeT > 0){ shakeT -= dt; const s = shakeT*0.6; ctx.translate((Math.random()-0.5)*s, (Math.random()-0.5)*s); }
   ctx.clearRect(-20,-20,W+40,H+40);
 
+  // arka plan filigranı — KOSKOCA MAL PUSUCU
+  ctx.save();
+  ctx.translate(W/2, H/2);
+  ctx.rotate(-Math.PI/12);
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillStyle = "rgba(79,195,247,.10)";
+  ctx.font = `900 ${Math.max(28, W*0.16)}px system-ui, sans-serif`;
+  ctx.fillText("MAL", 0, -W*0.11);
+  ctx.fillText("PUSUCU", 0, W*0.11);
+  ctx.restore();
+
   // yavaş çekim arka plan tonu
   if (slowT > 0){ ctx.fillStyle = "rgba(79,195,247,.07)"; ctx.fillRect(0,0,W,H); }
 
